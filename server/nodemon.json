@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "dbAdmin",
+    "MONGO_PASSWORD": "roottoor28",
+    "MONGO_DB": "printers"
+  }
+}
