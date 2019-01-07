@@ -22,7 +22,7 @@ module.exports = buildSchema(`
         datum: String!
         szervizes: User!
         leiras: String!
-        alkatresz: [Alkatresz!]!
+        alkatresz: [Alkatresz!]
     }
     type Printer{
         _id: ID!
@@ -30,8 +30,8 @@ module.exports = buildSchema(`
         marka: String!
         tipus: String!
         sn: String!
-        szamlalo: [Szamlalo!]!
-        javitasok: [Javitasok!]!
+        szamlalo: [Szamlalo!]
+        javitasok: [Javitasok!]
     }
     input PrinterInput{
         gepszam: String!
@@ -44,7 +44,7 @@ module.exports = buildSchema(`
         password: String!
     }
     type RootQuery{
-        printers: [Printer!]!
+        printers: [Printer!]
     
     }
     type RootMutation{

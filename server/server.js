@@ -7,19 +7,18 @@ const schema = require("./graphql/schema");
 const rootValue = require("./graphql/resolvers");
 
 const app = express();
-const events = [];
 
 app.use(bodyParser.json());
 
-// app.use(
-//   "/graphql",
-//   cors(),
-//   graphqlHTTP({
-//     schema,
-//     rootValue,
-//     graphiql: true
-//   })
-// );
+app.use(
+  "/graphql",
+  cors(),
+  graphqlHTTP({
+    schema,
+    rootValue,
+    graphiql: true
+  })
+);
 
 app.get("/", (req, res, next) => {
   res.send("Hello World");
